@@ -21,3 +21,6 @@ cd build
 cmake ..
 make
 make install
+
+# 编译单个测试文件
+例：make one SRC=src/01_decode.cpp

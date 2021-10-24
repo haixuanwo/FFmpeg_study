@@ -1,6 +1,7 @@
 
 SOURCE = \
-	src/test.cpp
+	src/test.cpp \
+	src/fopen.cpp
 
 MAIN = main.cpp
 UNIT_TEST_MAIN = unit_test_main.cpp
@@ -21,6 +22,9 @@ all:
 
 test:
 	${GXX} ${SOURCE} ${UNIT_TEST_MAIN} -I ${INDCLUDE_DIR} -L ${LIB_DIR} ${FLAGS} -lgtest -o ${TARGET}
+
+one:
+	${GXX} ${SOURCE} ${SRC} -I ${INDCLUDE_DIR} -L ${LIB_DIR} ${FLAGS} -o ${TARGET}
 
 clean:
 	rm -rf ${TARGET} *.o
